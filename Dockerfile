@@ -11,10 +11,10 @@ RUN apt-get install -y build-essential && apt-get clean
 # 切换回用户
 USER jovyan
 
-# 安装 Jupyter 插件，支持 Golang
-RUN go get -u github.com/gopherdata/gophernotes && \
-    mkdir -p ~/.local/share/jupyter/kernels/gophernotes && \
-    cp -r $GOPATH/src/github.com/gopherdata/gophernotes/kernel/* ~/.local/share/jupyter/kernels/gophernotes
+# # 安装 Jupyter 插件，支持 Golang
+# RUN go get -u github.com/gopherdata/gophernotes && \
+#     mkdir -p ~/.local/share/jupyter/kernels/gophernotes && \
+#     cp -r $GOPATH/src/github.com/gopherdata/gophernotes/kernel/* ~/.local/share/jupyter/kernels/gophernotes
 
 # 安装 Jupyter 插件，支持 C++
 RUN conda install -c conda-forge xeus-cling
