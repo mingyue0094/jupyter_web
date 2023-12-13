@@ -25,8 +25,8 @@ RUN go install github.com/gopherdata/gophernotes@latest && \
 # 安装 Jupyter 插件，支持 C++
 RUN conda install -c conda-forge xeus-cling
 
-# 设置密码
-RUN python3 -c "from jupyter_server.auth import passwd; print(passwd('$JUPYTER_PASSWORD'))" > /home/jovyan/.jupyter/jupyter_notebook_config.py
+# # 设置密码
+# RUN echo "c.NotebookApp.password = '$(python3 -c "from notebook.auth import passwd; print(passwd('${JUPYTER_PASSWORD}'))")'" >> /home/jovyan/.jupyter/jupyter_notebook_config.py
 
 EXPOSE 8888
 
