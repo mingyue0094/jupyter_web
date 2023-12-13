@@ -1,0 +1,12 @@
+image:
+  # 在这里导入你的 Dockerfile
+  file: .Dockerfile
+
+tasks:
+  - name: Open jupyter notebook web server
+    command:docker run -e JUPYTER_PASSWORD=$my_custom_password -p 8888:8888 my_jupyter
+
+
+ports:
+  - port: 8888
+    visibility: public
