@@ -20,7 +20,7 @@ USER jovyan
 RUN conda install -c conda-forge xeus-cling
 
 # 设置密码
-RUN python3 -c "from notebook.auth import passwd; print(passwd('$JUPYTER_PASSWORD'))" > /home/jovyan/.jupyter/jupyter_notebook_config.py
+RUN python3 -c "from jupyter_server.auth import passwd; print(passwd('$JUPYTER_PASSWORD'))" > /home/jovyan/.jupyter/jupyter_notebook_config.py
 
 EXPOSE 8888
 
