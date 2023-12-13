@@ -4,7 +4,7 @@ image:
 
 tasks:
   - name: Open jupyter notebook web server
-    command:docker run -e JUPYTER_PASSWORD=$my_custom_password -p 8888:8888 my_jupyter
+    command: docker run -e JUPYTER_PASSWORD=$my_custom_password -p 8888:8888 my_jupyter
 
 
 ports:
