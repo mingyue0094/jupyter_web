@@ -1,6 +1,6 @@
 image:
   # 在这里导入你的 Dockerfile
-  file: .Dockerfile
+  file: Dockerfile
 
 tasks:
   - name: Open jupyter notebook web server
